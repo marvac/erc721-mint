@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'ppneuemontreal-medium';
+  src: url('./ppneuemontreal-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'mondwest-regular';
+  src: url('./Mondwest-Regular.woff2') format('woff2');
+}
 
 @layer base {
   html {
@@ -28,10 +37,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: ppneuemontreal-medium,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
-
+h1 {
+  font-family: mondwest-regular,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 a {
   color: #7dd3fc;
   text-decoration: none;

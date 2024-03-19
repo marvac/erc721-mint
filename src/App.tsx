@@ -303,16 +303,10 @@ export default function Home() {
   return (
     <div className="w-screen min-h-screen">
       <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
-      <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
-        <div className="items-center justify-center hidden w-full h-full lg:col-span-5 lg:flex lg:px-12">
-          <HeadingImage
-            src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
-            isLoading={isLoading}
-          />
-        </div>
+      <div className="grid h-screen">
         <div className="flex items-center justify-center w-full h-full col-span-1 lg:col-span-7">
           <div className="flex flex-col w-full max-w-xl gap-4 p-12 rounded-xl lg:border lg:border-gray-400 lg:dark:border-gray-800">
-            <div className="flex w-full mt-8 xs:mb-8 xs:mt-0 lg:hidden">
+            <div className="flex w-full ">
               <HeadingImage
                 src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
                 isLoading={isLoading}
@@ -339,7 +333,7 @@ export default function Home() {
                   </span>
                 </p>
               )}
-              <h1 className="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">
+              <h1 className="text-3xl font-bold">
                 {contractMetadata.isLoading ? (
                   <div
                     role="status"
@@ -356,7 +350,7 @@ export default function Home() {
               </h1>
               {contractMetadata.data?.description ||
                 contractMetadata.isLoading ? (
-                  <div className="text-gray-500 line-clamp-2">
+                  <div className="text-gray-500">
                   {contractMetadata.isLoading ? (
                     <div
                       role="status"
@@ -490,7 +484,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <PoweredBy />
     </div>
   );
 }
