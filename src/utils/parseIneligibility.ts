@@ -23,7 +23,7 @@ export function parseIneligibility(
       return `You are not eligible to mint ${quantity} tokens.`;
     }
 
-    return "You are not eligible to mint at this time.";
+    return "Wallet not eligible to mint.";
   }
 
   return reason;
